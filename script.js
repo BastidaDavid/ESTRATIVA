@@ -8,7 +8,6 @@ const introSplash = document.querySelector("[data-intro-splash]");
 const introClose = document.querySelector("[data-intro-close]");
 const contactRecipients = [
   "Consultoria-_-Asesoria@hotmail.com",
-  "blanch_gordon@hotmail.com",
 ];
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 let introSplashTimer;
