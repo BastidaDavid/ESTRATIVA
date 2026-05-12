@@ -4,11 +4,14 @@ const navMenu = document.querySelector("[data-nav-menu]");
 const revealItems = document.querySelectorAll(".reveal");
 const contactForm = document.querySelector("[data-contact-form]");
 const formStatus = document.querySelector("[data-form-status]");
+const introSplash = document.querySelector("[data-intro-splash]");
+const introClose = document.querySelector("[data-intro-close]");
 const contactRecipients = [
   "Consultoria-_-Asesoria@hotmail.com",
   "blanch_gordon@hotmail.com",
 ];
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+let introSplashTimer;
 
 function syncHeader() {
   header.classList.toggle("is-scrolled", window.scrollY > 18);
@@ -48,6 +51,24 @@ function setupReveal() {
   revealItems.forEach((item) => revealObserver.observe(item));
 }
 
+function closeIntroSplash() {
+  if (!introSplash || introSplash.classList.contains("is-hidden")) return;
+  window.clearTimeout(introSplashTimer);
+  introSplash.classList.add("is-hidden");
+  document.body.classList.remove("is-splash-open");
+  window.setTimeout(() => introSplash.remove(), reduceMotion ? 0 : 480);
+}
+
+function setupIntroSplash() {
+  if (!introSplash) return;
+  document.body.classList.add("is-splash-open");
+  introClose?.addEventListener("click", closeIntroSplash);
+  window.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closeIntroSplash();
+  });
+  introSplashTimer = window.setTimeout(closeIntroSplash, reduceMotion ? 1800 : 3200);
+}
+
 function buildContactMailto(formData) {
   const subject = encodeURIComponent("Solicitud de asesoría ESTRATTIVA");
   const body = [
@@ -65,6 +86,7 @@ function buildContactMailto(formData) {
 window.addEventListener("scroll", syncHeader, { passive: true });
 syncHeader();
 setupReveal();
+setupIntroSplash();
 
 if (navToggle && navMenu) {
   navToggle.addEventListener("click", toggleMenu);
@@ -89,6 +111,7 @@ if (contactForm && formStatus) {
 }
 
 window.addEventListener("beforeprint", () => {
+  closeIntroSplash();
   revealItems.forEach((item) => item.classList.add("is-visible"));
   closeMenu();
 });

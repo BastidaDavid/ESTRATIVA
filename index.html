@@ -17,10 +17,20 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="intro-splash" role="dialog" aria-modal="true" aria-label="Bienvenida ESTRATTIVA" data-intro-splash>
+      <div class="intro-splash__panel">
+        <button class="intro-splash__close" type="button" aria-label="Cerrar bienvenida" data-intro-close>&times;</button>
+        <img src="img/estrattiva-welcome.png" alt="Consultor&iacute;a y asesor&iacute;a profesional" />
+        <span class="intro-splash__line" aria-hidden="true"></span>
+      </div>
+    </div>
+
     <header class="site-header" data-header>
       <nav class="navbar" aria-label="Navegaci&oacute;n principal">
         <a class="brand" href="#inicio" aria-label="ESTRATTIVA inicio">
-          <span class="brand__mark" aria-hidden="true">E</span>
+          <span class="brand__mark" aria-hidden="true">
+            <img src="img/estrattiva-logo.svg" alt="" />
+          </span>
           <span class="brand__copy">
             <span class="brand__name">ESTRATTIVA</span>
             <span class="brand__subtitle">Consultor&iacute;a y Asesor&iacute;a</span>
@@ -697,9 +707,12 @@
 
     <footer class="footer">
       <div class="container footer__grid">
-        <div>
+        <div class="footer__brand">
+          <img src="img/estrattiva-logo.svg" alt="" aria-hidden="true" />
+          <div>
           <strong>ESTRATTIVA</strong>
           <span>Consultor&iacute;a y Asesor&iacute;a</span>
+          </div>
         </div>
         <div class="footer__contact">
           <a href="mailto:Consultoria-_-Asesoria@hotmail.com">Consultoria-_-Asesoria@hotmail.com</a>

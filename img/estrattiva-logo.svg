@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 96" role="img" aria-labelledby="title desc">
+  <title id="title">ESTRATTIVA</title>
+  <desc id="desc">Logo con una C azul y una A dorada estilizada.</desc>
+  <path
+    d="M83 22a38 38 0 1 0-22 61"
+    fill="none"
+    stroke="#061529"
+    stroke-linecap="butt"
+    stroke-width="17"
+  />
+  <path
+    d="M73 82 92 37l24 45h-16L92 65 84 82Z"
+    fill="#d7a64c"
+  />
+  <path
+    d="M86 82 92 68l7 14"
+    fill="none"
+    stroke="#f4d58b"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="3"
+  />
+</svg>
