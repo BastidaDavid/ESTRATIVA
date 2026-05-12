@@ -1,6 +1,6 @@
-# ESTRATIVA
+# ESTRATTIVA
 
-Landing page corporativa para **ESTRATIVA | Estrategia Administrativa**.
+Landing page corporativa para **ESTRATTIVA | Consultor&iacute;a Profesional**.
 
 ## Contenido
 
