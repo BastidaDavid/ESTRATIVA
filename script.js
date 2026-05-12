@@ -4,6 +4,10 @@ const navMenu = document.querySelector("[data-nav-menu]");
 const revealItems = document.querySelectorAll(".reveal");
 const contactForm = document.querySelector("[data-contact-form]");
 const formStatus = document.querySelector("[data-form-status]");
+const contactRecipients = [
+  "Consultoria-_-Asesoria@hotmail.com",
+  "blanch_gordon@hotmail.com",
+];
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 function syncHeader() {
@@ -44,6 +48,20 @@ function setupReveal() {
   revealItems.forEach((item) => revealObserver.observe(item));
 }
 
+function buildContactMailto(formData) {
+  const subject = encodeURIComponent("Solicitud de asesoría ESTRATTIVA");
+  const body = [
+    `Nombre: ${formData.get("nombre") || ""}`,
+    `Correo: ${formData.get("correo") || ""}`,
+    `Organización: ${formData.get("organizacion") || "No especificada"}`,
+    "",
+    "Mensaje:",
+    formData.get("mensaje") || "",
+  ].join("\n");
+
+  return `mailto:${contactRecipients.join(",")}?subject=${subject}&body=${encodeURIComponent(body)}`;
+}
+
 window.addEventListener("scroll", syncHeader, { passive: true });
 syncHeader();
 setupReveal();
@@ -63,7 +81,9 @@ if (navToggle && navMenu) {
 if (contactForm && formStatus) {
   contactForm.addEventListener("submit", (event) => {
     event.preventDefault();
-    formStatus.textContent = "Gracias. Su solicitud ha sido registrada.";
+    const mailtoUrl = buildContactMailto(new FormData(contactForm));
+    formStatus.textContent = "Se abrirá su correo para enviar la solicitud.";
+    window.location.href = mailtoUrl;
     contactForm.reset();
   });
 }
