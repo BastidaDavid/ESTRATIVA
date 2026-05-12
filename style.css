@@ -2363,12 +2363,12 @@ svg {
   }
 
   .impact__grid {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 4mm;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5mm;
   }
 
   .impact-card {
-    min-height: 39mm;
+    min-height: 34mm;
     padding: 5mm;
   }
 
