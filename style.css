@@ -2120,6 +2120,273 @@ svg {
 }
 
 @media print {
+  .navbar {
+    color: #ffffff;
+    border-color: #061529;
+    background:
+      linear-gradient(135deg, #061529 0%, #0a203d 68%, #102a4a 100%);
+  }
+
+  .brand__mark,
+  .site-header.is-scrolled .brand__mark {
+    color: #061529;
+    border-color: rgba(255, 255, 255, 0.72);
+    background: #ffffff;
+  }
+
+  .brand__subtitle {
+    color: rgba(255, 255, 255, 0.72);
+  }
+
+  .hero {
+    position: relative;
+    padding: 8mm 9mm;
+    overflow: hidden;
+    color: #ffffff;
+    border: 0;
+    border-radius: 3mm;
+    background:
+      linear-gradient(135deg, #061529 0%, #0a203d 58%, #102a4a 100%);
+  }
+
+  .hero::after {
+    position: absolute;
+    display: block;
+    top: -28mm;
+    right: -18mm;
+    width: 82mm;
+    height: 82mm;
+    border: 0.45mm solid rgba(255, 255, 255, 0.16);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.04);
+    content: "";
+  }
+
+  .hero__eyebrow,
+  .hero h1,
+  .hero p {
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero__eyebrow {
+    color: rgba(255, 255, 255, 0.72);
+  }
+
+  .hero h1 {
+    color: #ffffff;
+  }
+
+  .hero p {
+    color: rgba(255, 255, 255, 0.76);
+  }
+
+  .section-heading,
+  .about__copy,
+  .contact__copy {
+    position: relative;
+  }
+
+  .section-heading::before,
+  .about__copy::before,
+  .contact__copy::before {
+    display: block;
+    width: 14mm;
+    height: 0.55mm;
+    margin-bottom: 3mm;
+    background: linear-gradient(90deg, #061529, #c4ccd7);
+    content: "";
+  }
+
+  .section-kicker::before,
+  .hero__eyebrow::before {
+    display: none;
+  }
+
+  .section-kicker,
+  .content-link span,
+  .scope-card span,
+  .impact-card span,
+  .evaluation-card span,
+  .schedule-card span {
+    color: #607089;
+    letter-spacing: 0.1em;
+  }
+
+  .content-link,
+  .scope-card,
+  .service-card,
+  .impact-card,
+  .schedule-card,
+  .evaluation-card,
+  .planning-card,
+  .calendar-card,
+  .contact-form,
+  .about__panel {
+    position: relative;
+    overflow: hidden;
+    border-color: #d7e0ea;
+    border-radius: 2.4mm;
+    background:
+      linear-gradient(135deg, #ffffff 0%, #ffffff 62%, #f4f7fa 100%);
+  }
+
+  .content-link::before,
+  .scope-card::before,
+  .service-card::before,
+  .impact-card::before,
+  .schedule-card::before,
+  .evaluation-card::before,
+  .planning-card::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 0.8mm;
+    background: linear-gradient(90deg, #061529, #c4ccd7);
+    content: "";
+  }
+
+  .content-link span,
+  .scope-card span,
+  .impact-card span,
+  .evaluation-card span,
+  .schedule-card span {
+    display: inline-grid;
+    width: fit-content;
+    min-width: 8mm;
+    min-height: 5mm;
+    place-items: center;
+    padding: 0 1.6mm;
+    color: #ffffff;
+    border-radius: 999px;
+    background: #061529;
+  }
+
+  .content-link:nth-child(3n),
+  .scope-card:nth-child(even),
+  .schedule-card:nth-child(even) {
+    background:
+      linear-gradient(135deg, #f7f8fa 0%, #ffffff 72%);
+  }
+
+  .about__panel::before {
+    left: 0;
+    right: 0;
+    height: 1mm;
+  }
+
+  .about__values span {
+    border-left: 1.2mm solid #061529;
+    background: #f7f8fa;
+  }
+
+  .service-card__icon {
+    color: #ffffff;
+    border-color: #061529;
+    background: #061529;
+  }
+
+  .check-list li::before {
+    background: #102a4a;
+  }
+
+  .offer-panel,
+  .proposal-strip {
+    border: 0.35mm solid #061529;
+    border-radius: 2.4mm;
+    background:
+      linear-gradient(135deg, rgba(255, 255, 255, 0.1), transparent 42%),
+      #061529;
+  }
+
+  .impact {
+    padding: 7mm;
+    border-radius: 3mm;
+    background:
+      linear-gradient(135deg, #f7f8fa 0%, #ffffff 62%);
+  }
+
+  .impact__grid {
+    gap: 6mm;
+  }
+
+  .impact-card {
+    min-height: 35mm;
+    padding: 6mm;
+  }
+
+  .impact-card:nth-child(1),
+  .impact-card:nth-child(4) {
+    background:
+      linear-gradient(135deg, #061529 0%, #0a203d 100%);
+  }
+
+  .impact-card:nth-child(1) span,
+  .impact-card:nth-child(4) span {
+    color: #061529;
+    background: #ffffff;
+  }
+
+  .impact-card:nth-child(1) h3,
+  .impact-card:nth-child(4) h3 {
+    color: #ffffff;
+  }
+
+  .impact-card:nth-child(1) p,
+  .impact-card:nth-child(4) p {
+    color: rgba(255, 255, 255, 0.78);
+  }
+
+  .timeline li span {
+    border-color: #eef1f5;
+  }
+
+  .phase-example {
+    color: #ffffff;
+    border-color: #061529;
+    background: #061529;
+  }
+
+  .planning-panel {
+    border-radius: 2.8mm;
+    background:
+      linear-gradient(135deg, #eef2f6 0%, #ffffff 66%);
+  }
+
+  .planning-card--dark {
+    background:
+      linear-gradient(135deg, #061529 0%, #102a4a 100%);
+  }
+
+  .calendar-grid .is-key {
+    background: #102a4a;
+  }
+
+  .evaluation-card__percent {
+    color: #ffffff;
+    min-width: 17mm;
+    padding: 1.5mm 2.4mm;
+    text-align: center;
+    border-radius: 999px;
+    background: #061529;
+  }
+
+  .contact {
+    padding: 7mm;
+    border-radius: 3mm;
+    background:
+      linear-gradient(135deg, #f7f8fa 0%, #ffffff 60%);
+  }
+
+  .footer {
+    border-radius: 2.4mm;
+    background:
+      linear-gradient(135deg, #061529 0%, #0a203d 100%);
+  }
+}
+
+@media print {
   .site-header {
     margin-bottom: 4mm;
   }
@@ -2566,5 +2833,482 @@ svg {
   .calendar-card,
   .evaluation-card {
     break-inside: avoid;
+  }
+}
+
+@media print {
+  @page {
+    margin: 9mm;
+  }
+
+  body {
+    font-size: 9.6pt;
+    line-height: 1.32;
+  }
+
+  .site-header {
+    margin-bottom: 3mm;
+  }
+
+  .navbar {
+    min-height: 11mm;
+    padding: 0 3.5mm;
+    border-radius: 2mm;
+  }
+
+  .brand__mark,
+  .site-header.is-scrolled .brand__mark {
+    width: 7.5mm;
+    height: 7.5mm;
+    border-radius: 1.2mm;
+  }
+
+  .brand__name {
+    font-size: 11.5pt;
+  }
+
+  .brand__subtitle {
+    font-size: 6.8pt;
+  }
+
+  .hero {
+    margin-bottom: 4mm;
+    padding: 6mm 8mm 7mm;
+    border-radius: 2.6mm;
+  }
+
+  .hero__eyebrow {
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .hero h1 {
+    max-width: 168mm;
+    font-size: 20.5pt;
+  }
+
+  .hero p {
+    max-width: 182mm;
+    font-size: 8.8pt;
+    line-height: 1.28;
+  }
+
+  .about,
+  .scope,
+  .services,
+  .impact,
+  .contents {
+    break-after: auto;
+  }
+
+  .about,
+  .scope,
+  .services,
+  .impact,
+  .methodology,
+  .evaluation,
+  .contact {
+    margin-top: 4mm;
+  }
+
+  .section-heading,
+  .about__copy,
+  .contact__copy {
+    max-width: none;
+    margin-bottom: 4mm;
+  }
+
+  .section-heading::before,
+  .about__copy::before,
+  .contact__copy::before {
+    width: 11mm;
+    height: 0.45mm;
+    margin-bottom: 2mm;
+  }
+
+  .section-kicker {
+    margin-bottom: 1.8mm;
+    font-size: 6.8pt;
+  }
+
+  .section-heading h2,
+  .about__copy h2,
+  .contact__copy h2 {
+    font-size: 18.5pt;
+    line-height: 1.04;
+  }
+
+  .section-heading p,
+  .about__copy p,
+  .contact__copy p {
+    margin-top: 2.2mm;
+    font-size: 8.5pt;
+    line-height: 1.28;
+  }
+
+  .contents {
+    padding-top: 3mm;
+  }
+
+  .contents .section-heading {
+    margin-bottom: 3mm;
+  }
+
+  .contents__grid {
+    gap: 2mm;
+  }
+
+  .content-link {
+    min-height: 15.5mm;
+    padding: 2.4mm;
+  }
+
+  .content-link span,
+  .scope-card span,
+  .impact-card span,
+  .evaluation-card span,
+  .schedule-card span {
+    min-width: 7mm;
+    min-height: 4.3mm;
+    padding: 0 1.3mm;
+    font-size: 5.8pt;
+  }
+
+  .content-link strong {
+    font-size: 7.2pt;
+  }
+
+  .content-link em {
+    font-size: 5.9pt;
+  }
+
+  .about__grid {
+    grid-template-columns: 1fr 0.9fr;
+    gap: 7mm;
+  }
+
+  .about__panel,
+  .contact-form,
+  .service-card {
+    padding: 4mm;
+  }
+
+  .about__panel h3 {
+    font-size: 13pt;
+  }
+
+  .about__panel p {
+    font-size: 8.3pt;
+    line-height: 1.28;
+  }
+
+  .about__values {
+    gap: 2mm;
+    margin-top: 3mm;
+  }
+
+  .about__values span {
+    padding: 2mm 2.8mm;
+    font-size: 7.1pt;
+  }
+
+  .scope__grid {
+    gap: 3mm;
+  }
+
+  .scope-card {
+    min-height: 30mm;
+    padding: 4mm;
+  }
+
+  .scope-card h3,
+  .impact-card h3,
+  .evaluation-card h3 {
+    margin-top: 3mm;
+    font-size: 9.8pt;
+  }
+
+  .scope-card p,
+  .impact-card p,
+  .evaluation-card p,
+  .schedule-card p {
+    font-size: 7.1pt;
+    line-height: 1.28;
+  }
+
+  .offer-panel {
+    gap: 5mm;
+    margin-top: 4mm;
+    padding: 5mm;
+  }
+
+  .offer-panel h3 {
+    font-size: 12.5pt;
+  }
+
+  .offer-list {
+    gap: 2mm;
+  }
+
+  .offer-list li {
+    padding: 2.4mm 2.6mm 2.4mm 10.5mm;
+  }
+
+  .offer-list li::before {
+    top: 2.4mm;
+    left: 2.4mm;
+    width: 5.2mm;
+    height: 5.2mm;
+  }
+
+  .offer-list strong {
+    font-size: 7.6pt;
+  }
+
+  .offer-list span {
+    font-size: 6.6pt;
+  }
+
+  .services .section-heading h2 {
+    font-size: 19.5pt;
+  }
+
+  .proposal-services {
+    gap: 3mm;
+  }
+
+  .service-card--detailed {
+    padding: 3.6mm;
+  }
+
+  .service-card__icon {
+    width: 8.2mm;
+    height: 8.2mm;
+    margin-bottom: 2.8mm;
+    border-radius: 1.5mm;
+  }
+
+  .service-card__icon svg {
+    width: 4.5mm;
+    height: 4.5mm;
+  }
+
+  .service-card h3 {
+    font-size: 10.6pt;
+  }
+
+  .service-card p {
+    margin-top: 1.8mm;
+    font-size: 7.2pt;
+    line-height: 1.24;
+  }
+
+  .check-list {
+    gap: 1.2mm;
+    margin-top: 2.2mm;
+    font-size: 6.5pt;
+    line-height: 1.22;
+  }
+
+  .check-list li {
+    padding-left: 3.4mm;
+  }
+
+  .impact {
+    padding: 4.5mm;
+    border-radius: 2.6mm;
+  }
+
+  .impact__grid {
+    gap: 4mm;
+  }
+
+  .impact-card {
+    min-height: 27mm;
+    padding: 4mm;
+  }
+
+  .methodology .section-heading h2 {
+    font-size: 19pt;
+  }
+
+  .timeline {
+    margin-top: 5mm;
+  }
+
+  .timeline::before {
+    top: 5.3mm;
+  }
+
+  .timeline li {
+    gap: 1.8mm;
+  }
+
+  .timeline li span {
+    width: 11mm;
+    height: 11mm;
+    border-width: 1.2mm;
+    font-size: 8.4pt;
+  }
+
+  .timeline li strong {
+    font-size: 9.4pt;
+  }
+
+  .timeline li p {
+    max-width: 32mm;
+    font-size: 6.8pt;
+    line-height: 1.2;
+  }
+
+  .phase-example {
+    margin-top: 4mm;
+    padding: 1.2mm 2.4mm;
+    font-size: 6.2pt;
+  }
+
+  .schedule-grid {
+    gap: 3mm;
+  }
+
+  .schedule-card {
+    min-height: 25mm;
+    padding: 3.2mm;
+  }
+
+  .schedule-card strong {
+    margin-top: 2.2mm;
+    font-size: 8.7pt;
+  }
+
+  .planning-panel {
+    grid-template-columns: 0.58fr 1.42fr;
+    gap: 4mm;
+    margin-top: 4mm;
+    padding: 4mm;
+  }
+
+  .planning-panel__intro h3 {
+    font-size: 12.2pt;
+  }
+
+  .planning-panel__intro p {
+    font-size: 7.1pt;
+    line-height: 1.24;
+  }
+
+  .planning-grid {
+    gap: 2.4mm;
+  }
+
+  .planning-card,
+  .calendar-card {
+    min-height: 29mm;
+    padding: 3.2mm;
+  }
+
+  .planning-card h4 {
+    font-size: 9.5pt;
+  }
+
+  .planning-card p {
+    font-size: 6.7pt;
+    line-height: 1.22;
+  }
+
+  .calendar-card__head {
+    margin-bottom: 2mm;
+  }
+
+  .calendar-grid {
+    gap: 0.7mm;
+  }
+
+  .calendar-grid b,
+  .calendar-grid span {
+    min-height: 4.4mm;
+    border-radius: 1mm;
+    font-size: 5.3pt;
+  }
+
+  .evaluation {
+    padding-top: 0;
+  }
+
+  .evaluation__grid {
+    grid-template-columns: 0.56fr 1.44fr;
+    gap: 5mm;
+  }
+
+  .evaluation .section-heading h2 {
+    font-size: 18pt;
+  }
+
+  .evaluation-cards {
+    gap: 3mm;
+  }
+
+  .evaluation-card {
+    min-height: 25mm;
+    padding: 3.8mm 4.5mm;
+  }
+
+  .evaluation-card h3 {
+    margin-top: 2mm;
+  }
+
+  .evaluation-card__percent {
+    top: 3mm;
+    right: 4mm;
+    min-width: 13mm;
+    padding: 1mm 2mm;
+    font-size: 10pt;
+  }
+
+  .contact {
+    min-height: 138mm;
+    padding: 5mm;
+  }
+
+  .contact__grid {
+    grid-template-columns: 0.68fr 1fr;
+    gap: 7mm;
+  }
+
+  .contact__copy h2 {
+    font-size: 20pt;
+  }
+
+  .contact__details {
+    gap: 1.4mm;
+    margin-top: 4mm;
+  }
+
+  .contact__details a {
+    font-size: 8.3pt;
+  }
+
+  .contact-form label {
+    gap: 1mm;
+    margin-bottom: 2.2mm;
+  }
+
+  .contact-form span {
+    font-size: 7.3pt;
+  }
+
+  .contact-form input {
+    min-height: 8.5mm;
+  }
+
+  .contact-form textarea {
+    min-height: 42mm;
+  }
+
+  .footer {
+    margin-top: 6mm;
+  }
+
+  .footer__grid {
+    min-height: 14mm;
   }
 }
