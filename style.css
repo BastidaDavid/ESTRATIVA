@@ -3312,3 +3312,817 @@ svg {
     min-height: 14mm;
   }
 }
+
+/* Corporate presentation print layer */
+@media print {
+  @page {
+    size: letter landscape;
+    margin: 7mm;
+  }
+
+  html,
+  body {
+    background: #e9eef4;
+  }
+
+  body {
+    color: #071529;
+    font-size: 9.15pt;
+    line-height: 1.28;
+  }
+
+  .container,
+  .hero__content {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+  }
+
+  .site-header {
+    margin: 0 0 2.5mm;
+  }
+
+  .navbar {
+    min-height: 10.5mm;
+    padding: 0 4mm;
+    color: #ffffff;
+    border: 0;
+    border-radius: 2.2mm;
+    background:
+      linear-gradient(90deg, #071529 0%, #0d2745 64%, #1d3758 100%);
+  }
+
+  .brand__mark,
+  .site-header.is-scrolled .brand__mark {
+    width: 7.4mm;
+    height: 7.4mm;
+    color: #071529;
+    border: 0.35mm solid rgba(255, 255, 255, 0.82);
+    border-radius: 1.2mm;
+    background: #ffffff;
+  }
+
+  .brand__name {
+    font-size: 11.8pt;
+    letter-spacing: 0.02em;
+  }
+
+  .brand__subtitle {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 6.7pt;
+  }
+
+  .hero {
+    position: relative;
+    min-height: 50mm;
+    margin: 0 0 3.2mm;
+    padding: 7mm 8mm;
+    overflow: hidden;
+    color: #ffffff;
+    border: 0.35mm solid rgba(255, 255, 255, 0.16);
+    border-radius: 3mm;
+    background:
+      linear-gradient(110deg, rgba(7, 21, 41, 0.98) 0%, rgba(8, 30, 55, 0.96) 58%, rgba(31, 57, 86, 0.92) 100%),
+      linear-gradient(135deg, #071529, #163456);
+  }
+
+  .hero::before,
+  .hero::after {
+    position: absolute;
+    display: block;
+    content: "";
+    pointer-events: none;
+  }
+
+  .hero::before {
+    inset: 0 0 0 auto;
+    width: 94mm;
+    background:
+      linear-gradient(135deg, rgba(255, 255, 255, 0.12), transparent 45%),
+      repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.08) 0 0.25mm, transparent 0.25mm 8mm);
+    opacity: 0.46;
+  }
+
+  .hero::after {
+    top: -30mm;
+    right: -16mm;
+    width: 86mm;
+    height: 86mm;
+    border: 0.45mm solid rgba(255, 255, 255, 0.16);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .hero__content,
+  .hero__eyebrow,
+  .hero h1,
+  .hero p {
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero__eyebrow {
+    margin-bottom: 2.4mm;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 6.7pt;
+  }
+
+  .hero h1 {
+    max-width: 160mm;
+    color: #ffffff;
+    font-size: 22.4pt;
+    line-height: 1.02;
+  }
+
+  .hero p {
+    max-width: 172mm;
+    margin-top: 3mm;
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 9.2pt;
+    line-height: 1.34;
+  }
+
+  .contents,
+  .about,
+  .scope,
+  .services,
+  .impact,
+  .methodology,
+  .evaluation,
+  .contact {
+    position: relative;
+    margin: 3mm 0 0;
+    padding: 5mm;
+    overflow: hidden;
+    border: 0.28mm solid #cfd8e3;
+    border-radius: 3mm;
+    background:
+      linear-gradient(180deg, #ffffff 0%, #fbfcfe 100%);
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+  }
+
+  .contents::before,
+  .about::before,
+  .scope::before,
+  .services::before,
+  .impact::before,
+  .methodology::before,
+  .evaluation::before,
+  .contact::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1.15mm;
+    background: linear-gradient(90deg, #071529 0%, #1a3c61 56%, #c5ced8 100%);
+    content: "";
+  }
+
+  .section-heading,
+  .about__copy,
+  .contact__copy {
+    max-width: none;
+    margin: 0 0 3.4mm;
+    padding-left: 4mm;
+    border-left: 0.85mm solid #102a4a;
+  }
+
+  .section-heading::before,
+  .about__copy::before,
+  .contact__copy::before {
+    display: none;
+  }
+
+  .section-kicker {
+    margin-bottom: 1.3mm;
+    color: #627186;
+    font-size: 6.4pt;
+    letter-spacing: 0.12em;
+  }
+
+  .section-heading h2,
+  .about__copy h2,
+  .contact__copy h2 {
+    color: #071529;
+    font-size: 17.2pt;
+    line-height: 1.05;
+  }
+
+  .section-heading p,
+  .about__copy p,
+  .contact__copy p {
+    max-width: 196mm;
+    margin-top: 1.8mm;
+    color: #536174;
+    font-size: 7.8pt;
+    line-height: 1.26;
+  }
+
+  .contents {
+    padding-top: 4.2mm;
+    min-height: 118mm;
+  }
+
+  .contents::after {
+    position: absolute;
+    right: 7mm;
+    bottom: 5mm;
+    color: rgba(7, 21, 41, 0.055);
+    font-size: 20pt;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    content: "Propuesta ejecutiva";
+  }
+
+  .contents__grid {
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1.9mm;
+  }
+
+  .content-link {
+    min-height: 19mm;
+    gap: 1.2mm;
+    padding: 2.4mm;
+    border-color: #d7e0ea;
+    border-radius: 2mm;
+    background:
+      linear-gradient(180deg, #ffffff 0%, #f6f8fb 100%);
+  }
+
+  .content-link::before {
+    height: 0.75mm;
+    background: linear-gradient(90deg, #071529, #c5ced8);
+  }
+
+  .content-link span,
+  .scope-card span,
+  .impact-card span,
+  .evaluation-card span,
+  .schedule-card span {
+    display: inline-grid;
+    width: fit-content;
+    min-width: 6.7mm;
+    min-height: 4mm;
+    place-items: center;
+    padding: 0 1.2mm;
+    color: #ffffff;
+    border-radius: 999px;
+    background: #071529;
+  }
+
+  .content-link strong {
+    color: #071529;
+    font-size: 6.8pt;
+    line-height: 1.14;
+  }
+
+  .content-link em {
+    color: #627186;
+    font-size: 5.6pt;
+    line-height: 1.2;
+  }
+
+  .about__grid {
+    grid-template-columns: 1fr 0.9fr;
+    gap: 5.5mm;
+    align-items: stretch;
+  }
+
+  .about__copy p + p {
+    margin-top: 2mm;
+  }
+
+  .about__panel,
+  .contact-form,
+  .service-card,
+  .scope-card,
+  .impact-card,
+  .schedule-card,
+  .evaluation-card,
+  .planning-card,
+  .calendar-card {
+    border: 0.28mm solid #d3dde8;
+    border-radius: 2.2mm;
+    background:
+      linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+  }
+
+  .about__panel {
+    padding: 4mm;
+  }
+
+  .about__panel::before {
+    left: 0;
+    right: 0;
+    height: 1mm;
+    background: linear-gradient(90deg, #071529, #c5ced8);
+  }
+
+  .about__panel h3 {
+    font-size: 12.5pt;
+  }
+
+  .about__panel p {
+    font-size: 7.4pt;
+    line-height: 1.28;
+  }
+
+  .about__values {
+    gap: 1.8mm;
+    margin-top: 3mm;
+  }
+
+  .about__values span {
+    padding: 1.8mm 2.4mm;
+    color: #071529;
+    font-size: 6.5pt;
+    border-left: 1mm solid #102a4a;
+    background: #eef2f6;
+  }
+
+  .scope__grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.4mm;
+  }
+
+  .scope-card {
+    min-height: 26mm;
+    padding: 3.2mm;
+  }
+
+  .scope-card h3,
+  .impact-card h3,
+  .evaluation-card h3 {
+    margin-top: 2.4mm;
+    color: #071529;
+    font-size: 8.8pt;
+    line-height: 1.15;
+  }
+
+  .scope-card p,
+  .impact-card p,
+  .evaluation-card p,
+  .schedule-card p {
+    margin-top: 1.5mm;
+    color: #5e6c7e;
+    font-size: 6.6pt;
+    line-height: 1.22;
+  }
+
+  .offer-panel {
+    grid-template-columns: 0.56fr 1.44fr;
+    gap: 4mm;
+    margin-top: 3mm;
+    padding: 4mm;
+    border: 0;
+    border-radius: 2.6mm;
+    background:
+      linear-gradient(120deg, rgba(255, 255, 255, 0.12), transparent 42%),
+      #071529;
+  }
+
+  .offer-panel .section-kicker {
+    color: rgba(255, 255, 255, 0.62);
+  }
+
+  .offer-panel h3 {
+    font-size: 11.8pt;
+  }
+
+  .offer-list {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.8mm;
+  }
+
+  .offer-list li {
+    min-height: 18mm;
+    padding: 2.2mm;
+    border-color: rgba(255, 255, 255, 0.18);
+    background: rgba(255, 255, 255, 0.07);
+  }
+
+  .offer-list li::before {
+    display: none;
+  }
+
+  .offer-list strong {
+    font-size: 6.7pt;
+  }
+
+  .offer-list span {
+    margin-top: 1mm;
+    font-size: 5.7pt;
+    line-height: 1.18;
+  }
+
+  .proposal-services {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5mm;
+  }
+
+  .services {
+    break-before: page;
+  }
+
+  .service-card--wide {
+    grid-column: 1 / -1;
+    min-height: 30mm;
+  }
+
+  .service-card--wide .check-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .service-card--detailed {
+    padding: 3.2mm;
+  }
+
+  .service-card__icon {
+    width: 7.2mm;
+    height: 7.2mm;
+    margin-bottom: 2mm;
+    color: #ffffff;
+    border-color: #071529;
+    border-radius: 1.4mm;
+    background: #071529;
+  }
+
+  .service-card__icon svg {
+    width: 4mm;
+    height: 4mm;
+  }
+
+  .service-card h3 {
+    font-size: 9.2pt;
+    line-height: 1.16;
+  }
+
+  .service-card p {
+    margin-top: 1.4mm;
+    font-size: 6.5pt;
+    line-height: 1.2;
+  }
+
+  .check-list {
+    gap: 0.9mm;
+    margin-top: 1.8mm;
+    color: #5e6c7e;
+    font-size: 5.75pt;
+    line-height: 1.16;
+  }
+
+  .check-list--columns {
+    grid-template-columns: 1fr;
+  }
+
+  .check-list li {
+    padding-left: 2.6mm;
+  }
+
+  .check-list li::before {
+    top: 0.55em;
+    width: 1.2mm;
+    height: 1.2mm;
+    background: #102a4a;
+  }
+
+  .impact {
+    color: #071529;
+    background:
+      linear-gradient(135deg, #f7f9fc 0%, #ffffff 70%);
+    break-before: page;
+  }
+
+  .impact .section-heading h2,
+  .impact .section-kicker {
+    color: #071529;
+  }
+
+  .impact .section-heading p {
+    color: #536174;
+  }
+
+  .impact__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3mm;
+  }
+
+  .impact-card {
+    min-height: 24mm;
+    padding: 3.4mm;
+  }
+
+  .impact-card:nth-child(1),
+  .impact-card:nth-child(4) {
+    border-color: #071529;
+    background:
+      linear-gradient(135deg, #071529 0%, #112c4d 100%);
+  }
+
+  .impact-card:nth-child(1) span,
+  .impact-card:nth-child(4) span {
+    color: #071529;
+    background: #ffffff;
+  }
+
+  .impact-card:nth-child(1) h3,
+  .impact-card:nth-child(4) h3 {
+    color: #ffffff;
+  }
+
+  .impact-card:nth-child(1) p,
+  .impact-card:nth-child(4) p {
+    color: rgba(255, 255, 255, 0.76);
+  }
+
+  .timeline {
+    margin-top: 4mm;
+    padding: 3.4mm;
+    border: 0.28mm solid #d3dde8;
+    border-radius: 2.4mm;
+    background: #f8fafc;
+  }
+
+  .timeline::before {
+    top: 8.7mm;
+    left: 9%;
+    right: 9%;
+    height: 0.35mm;
+    background: linear-gradient(90deg, transparent, #9fb0c3, #071529, #9fb0c3, transparent);
+  }
+
+  .timeline li {
+    gap: 1.4mm;
+  }
+
+  .timeline li span {
+    width: 10mm;
+    height: 10mm;
+    color: #ffffff;
+    border: 1.1mm solid #ffffff;
+    font-size: 7.8pt;
+    background: #071529;
+  }
+
+  .timeline li strong {
+    color: #071529;
+    font-size: 8.4pt;
+  }
+
+  .timeline li p {
+    max-width: 33mm;
+    color: #5e6c7e;
+    font-size: 6.2pt;
+    line-height: 1.18;
+  }
+
+  .phase-example {
+    margin-top: 3mm;
+    padding: 1mm 2.2mm;
+    color: #ffffff;
+    border: 0;
+    background: #071529;
+  }
+
+  .schedule-grid {
+    gap: 2.4mm;
+    margin-top: 2.4mm;
+  }
+
+  .schedule-card {
+    min-height: 22mm;
+    padding: 3mm;
+  }
+
+  .schedule-card strong {
+    margin-top: 1.8mm;
+    color: #071529;
+    font-size: 8pt;
+  }
+
+  .planning-panel {
+    grid-template-columns: 0.56fr 1.44fr;
+    gap: 3mm;
+    margin-top: 3mm;
+    padding: 3.4mm;
+    border-color: #cfd8e3;
+    border-radius: 2.6mm;
+    background:
+      linear-gradient(135deg, #eef2f6 0%, #ffffff 72%);
+  }
+
+  .planning-panel__intro h3 {
+    color: #071529;
+    font-size: 11.2pt;
+  }
+
+  .planning-panel__intro p {
+    font-size: 6.4pt;
+    line-height: 1.18;
+  }
+
+  .planning-grid {
+    gap: 2mm;
+  }
+
+  .planning-card,
+  .calendar-card {
+    min-height: 24mm;
+    padding: 2.8mm;
+  }
+
+  .planning-card h4 {
+    font-size: 8.4pt;
+  }
+
+  .planning-card p {
+    margin-top: 1.5mm;
+    font-size: 6.1pt;
+    line-height: 1.16;
+  }
+
+  .planning-card--dark {
+    border-color: #071529;
+    background:
+      linear-gradient(135deg, #071529 0%, #113153 100%);
+  }
+
+  .calendar-card__head {
+    margin-bottom: 1.8mm;
+  }
+
+  .calendar-card__head strong {
+    font-size: 7.8pt;
+  }
+
+  .calendar-card__head span {
+    font-size: 5.4pt;
+  }
+
+  .calendar-grid {
+    gap: 0.65mm;
+  }
+
+  .calendar-grid b,
+  .calendar-grid span {
+    min-height: 3.8mm;
+    border-radius: 0.8mm;
+    font-size: 4.85pt;
+  }
+
+  .calendar-grid .is-key {
+    border-color: #071529;
+    background: #071529;
+  }
+
+  .evaluation {
+    padding-top: 5mm;
+  }
+
+  .evaluation__grid {
+    grid-template-columns: 0.62fr 1.38fr;
+    gap: 4mm;
+  }
+
+  .evaluation .section-heading h2 {
+    font-size: 15.8pt;
+  }
+
+  .evaluation-cards {
+    gap: 2.4mm;
+  }
+
+  .evaluation-card {
+    min-height: 20mm;
+    padding: 2.8mm 3.8mm;
+  }
+
+  .evaluation-card__percent {
+    top: 2.8mm;
+    right: 3.6mm;
+    min-width: 12mm;
+    padding: 0.9mm 1.8mm;
+    color: #ffffff;
+    font-size: 8.2pt;
+    text-align: center;
+    border-radius: 999px;
+    background: #071529;
+  }
+
+  .contact {
+    min-height: 158mm;
+    margin-top: 2.5mm;
+    padding: 6mm;
+    color: #ffffff;
+    border-color: #071529;
+    background:
+      radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.12), transparent 32%),
+      linear-gradient(135deg, #071529 0%, #102a4a 100%);
+  }
+
+  .contact::before {
+    background: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0.28) 100%);
+  }
+
+  .contact::after {
+    position: absolute;
+    left: 7mm;
+    bottom: 7mm;
+    color: rgba(255, 255, 255, 0.055);
+    font-size: 30pt;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    content: "ESTRATIVA";
+  }
+
+  .contact__grid {
+    position: relative;
+    z-index: 1;
+    grid-template-columns: 0.56fr 1fr;
+    gap: 3.8mm;
+  }
+
+  .contact__copy h2 {
+    color: #ffffff;
+    font-size: 15.8pt;
+  }
+
+  .contact__copy {
+    border-left-color: rgba(255, 255, 255, 0.72);
+  }
+
+  .contact__copy p,
+  .contact .section-kicker {
+    color: rgba(255, 255, 255, 0.72);
+  }
+
+  .contact__details {
+    gap: 1.2mm;
+    margin-top: 3mm;
+  }
+
+  .contact__details a {
+    padding: 1.7mm 2.2mm;
+    color: #ffffff;
+    font-size: 7.2pt;
+    border: 0.28mm solid rgba(255, 255, 255, 0.18);
+    border-radius: 1.8mm;
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  .contact-form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 3mm;
+    row-gap: 1.5mm;
+    padding: 3.2mm;
+    background: rgba(255, 255, 255, 0.98);
+  }
+
+  .contact-form label {
+    gap: 0.8mm;
+    margin-bottom: 0;
+  }
+
+  .contact-form label:nth-of-type(4) {
+    grid-column: 1 / -1;
+  }
+
+  .contact-form span {
+    font-size: 6.6pt;
+  }
+
+  .contact-form input {
+    min-height: 6.4mm;
+  }
+
+  .contact-form textarea {
+    min-height: 16mm;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    border-color: #d3dde8;
+    border-radius: 1.6mm;
+    background: #ffffff;
+  }
+
+  .contact-form .btn {
+    display: none !important;
+  }
+
+  .footer {
+    margin-top: 3mm;
+    color: #ffffff;
+    border-radius: 2.4mm;
+    background:
+      linear-gradient(90deg, #071529 0%, #102a4a 100%);
+  }
+
+  .footer__grid {
+    min-height: 11mm;
+    padding: 0 4mm;
+  }
+}
